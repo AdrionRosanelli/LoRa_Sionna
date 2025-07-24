@@ -2,9 +2,9 @@
 
 ### Implementação da camada física do LoRa.
 
-* Arquivo "LoRa_SionnaPHY.ipynb":  Com algumas abstrações e aproximações (Claude Adrion)
+* Arquivo "LoRa_SionnaPHY.ipynb":  Arquivo base com a implementação da camada física (base do Claude).
 
-* Arquivo "LoRa_phy_Sionna.ipynb": Mais aproximado, com down e up chirps (Claude Gustavo)
+* Arquivo "LoRa_SionnaPHY_Tx.ipynb": Arquivo para desenvolvimento e teste do transmissor LoRa da camada física.
 
 ### Para testes.
 Arquivo "Sionna_tutorial_part1.ipynb" tutorial iniciante do Sionna PHY.
