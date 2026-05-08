@@ -1,19 +1,21 @@
 # LoRa_Sionna
 
-### Implementação da camada física do LoRa.
+### Implementação da camada física do LoRa baseado no Sionna e TensorFlow.
 
-* Arquivo "LoRa_SionnaPHY.ipynb":  Arquivo inicial com a implementação da camada física (base do Claude).
+* Arquivo "Lora_Phy_Tx_Batch.ipynb": Arquivo com a simulação do Transmissor e analises.
+ - Executado em um ambiente WSL.
 
-* Arquivo "LoRa_SionnaPHY_Tx.ipynb": Arquivo para desenvolvimento e teste do transmissor LoRa da camada física.
+### Análise da implementação da camada física do LoRa no GNU Radio.
 
-* Arquivo "Lora_Phy_Tx_Block.ipynb": Arquivo para desenvolvimento e teste do transmissor LoRa da camada física adaptado para ser compatível com o Sionna e sua estrutura de Block.
+* Arquivos "gr_cell1_time_benchmark.py", "gr_cell2_resource_benchmark.py", "gr_cell3_step_profiling.py": rotinas para analises da simulação do GNU.
+ - Executado em um ambiente do radioconda (GNU Radio) pelo seguinte comando:
+    & C:/Users/aaros/radioconda/python.exe "c:/Adrion/Doutorado/Sionna - LoRa/Simulador LoRa Phy/gr-lora_sdr-master/gr_cell1_time_benchmark.py"
+ - Esses arquivos devem estar na pasta do repositório do Tapparel clonado ( https://github.com/tapparelj/gr-lora_sdr.git )
 
-#### Funções da camada física do LoRa.
-* Arquivos "LoRaPhyTransmitter.py" e "LoRaPhyReciever.py" consistem nas funções do transmissor e receptor a serem utilizadas por aplicações do Sionna.
+### Comparação das simulações.
 
-* Arquivo "Teste_LoRa_PHY.ipynb" sendo desenvolvido para testar as funções .py e demonstrar uso.
-
-OBS: Códigos iniciais, ainda não testados e serão modificados com os próximos desenvolvimentos e compatibilizações para funcionar com todo o Sionna.
+* Arquivo "plot_comparison.py": Arquivo para geração de gráficos de comparação.
+ - Executado em qualquer ambiente python, mas precisa dos arquivos .csv gerados nas análises descritas acima.
 
 ### Para testes.
-Arquivo "Sionna_tutorial_part1.ipynb" tutorial iniciante do Sionna PHY.
+Arquivo "Sionna_tutorial_part1.ipynb" tutorial inicial do Sionna PHY.
