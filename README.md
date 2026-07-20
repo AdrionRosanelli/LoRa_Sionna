@@ -1,19 +1,19 @@
 # LoRa_Sionna
 
-This repository contains a study and comparison of two LoRa physical-layer transmitter implementations:
+This repository contains a study and comparison of LoRa physical-layer implementations, including:
 
-- a **Sionna + TensorFlow** implementation, and
+- a **Sionna + TensorFlow** implementation for the LoRa PHY workflow, and
 - a **GNU Radio** implementation used as a reference baseline.
 
-At the moment, the Sionna-based work includes the **transmitter path only** (the notebook `Lora_Phy_Tx_Batch.ipynb`), while the GNU Radio side is used to evaluate performance and resource usage.
+At the moment, the Sionna-based work includes both the **transmitter and receiver paths** (notebook `Lora_Phy_TxRx.ipynb`), while the GNU Radio side is used to compare performance and resource usage.
 
 ## Project Overview
 
-The goal of this project is to investigate and compare the behavior of a LoRa PHY transmitter implemented with Sionna and TensorFlow against an existing GNU Radio implementation. The comparison focuses on:
+The goal of this project is to investigate and compare the behavior of a LoRa PHY implemented with Sionna and TensorFlow against an existing GNU Radio implementation. In particular, the work aims to implement and explore the Sionna and TensorFlow simulation flow, including the study of GPU-parallelized execution and its impact on performance. The comparison focuses on:
 
 - processing time,
 - CPU and memory usage,
-- step-by-step profiling of the transmitter pipeline,
+- step-by-step profiling of the transmitter and receiver pipeline,
 - and visualization of the resulting benchmark metrics.
 
 ## Repository Contents
@@ -23,6 +23,11 @@ The goal of this project is to investigate and compare the behavior of a LoRa PH
 - `Lora_Phy_Tx_Batch.ipynb`
   - Main notebook for the LoRa transmitter simulation.
   - Contains the Sionna-based transmitter pipeline and analysis.
+  - Recommended execution environment: **WSL**.
+
+- `Lora_Phy_TxRx.ipynb`
+  - Main notebook for the LoRa PHY simulation with transmitter and receiver stages.
+  - Contains the Sionna-based transmitter and receiver pipeline and analysis.
   - Recommended execution environment: **WSL**.
 
 ### GNU Radio benchmark scripts
@@ -73,7 +78,7 @@ These versions are relevant for reproducing the results and for understanding wh
 
 ## Notes
 
-- This repository currently focuses on the **transmitter** side of the LoRa PHY chain.
+- This repository currently focuses on the Sionna-based LoRa PHY chain, including both transmitter and receiver components.
 - The comparison is mainly based on benchmark outputs and profiling results.
 - The exact execution environment may vary depending on the machine setup (WSL for the notebook flow, GNU Radio/Radioconda for the reference scripts).
 
